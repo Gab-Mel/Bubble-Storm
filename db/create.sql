@@ -1,0 +1,16 @@
+CREATE TABLE limite_bairro (
+    objectid TEXT PRIMARY KEY,
+    area FLOAT NOT NULL,
+    nome TEXT NOT NULL,
+    regiao_adm TEXT NOT NULL,
+    area_plane INT NOT NULL,
+    codbairro  INT NOT NULL,
+    cobra INT NOT NULL,
+    codbnum INT NOT NULL,
+    link TEXT NOT NULL,
+    rp TEXT NOT NULL,
+    codrp FLOAT NOT NULL,
+    codbairro_long INT NOT NULL,
+    st_area_shape FLOAT NOT NULL,
+    st_perimeter_shape FLOAT NOT NULL,
+);
