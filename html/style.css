@@ -1,17 +1,10 @@
-/* header {
-    background-color: darkslategrey;
-    color: aliceblue;
-    font-family: Helvetica;
-    padding-left: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    font-size: 24px;
-    overflow: hidden;
-} */
-
 body {
     margin: 0; 
     padding: 0;
+}
+
+li {
+  text-align: justify;
 }
 
 footer {
@@ -20,6 +13,9 @@ footer {
     text-align: center;
     color: rgb(216, 218, 243);
     font-size: 13px;
+    background-attachment: fixed;
+    /* height: 5.5rem; */
+    /* position: relative; */
 }
 
 footer a {
@@ -29,6 +25,22 @@ footer a {
 .footertext {
     color: rgb(199, 202, 240);
     line-height: .5;
+}
+
+.content {
+  float: justify;
+  padding: 20px;
+  height: 100%;
+  background-color: #f1f1f1;
+  padding-bottom: 2em;
+  padding-left: 5em;
+  padding-right: 5em;
+  position: relative;
+  min-height: 100vh;
+}
+
+.content p {
+  text-align: justify;
 }
 
 .header {
