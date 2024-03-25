@@ -7,7 +7,7 @@
         <link rel="icon" href="./figs/favicon.ico">
         <link rel="stylesheet" href="style.css">
     </head>
-    
+
 
     <body>
         <div class="header">
@@ -23,27 +23,63 @@
         <div class="content">
             <h1>Gráficos e estatísticas</h1>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec auctor risus, vel egestas nisl. Praesent at auctor nulla, auctor sollicitudin erat. Fusce mi nisi, placerat et orci ac, posuere efficitur turpis. Nulla eu euismod nisi. Etiam in aliquet est. Nunc egestas velit sed semper finibus. Phasellus volutpat tincidunt dui id malesuada. Pellentesque lobortis metus non elementum aliquam. Mauris vehicula eros eget est porttitor, non malesuada lorem malesuada. Nullam ut efficitur justo, vitae dignissim nisl. Aenean dui nunc, interdum a bibendum sed, maximus vitae nulla. Praesent aliquet sodales elit nec aliquet. Donec bibendum condimentum libero, id ultrices tortor tempor id.</p>
+            <p>
+              Focamos nossa exploração sobre os dados de chuva acumulada e chamados ao 1746, procurando por correlações entre eles.
+              O objetivo é tentar prever aumentos nos chamados baseado nas previsões meteorológicas. Desse modo, facilitando a resposta
+              das autoridades à eventos pluviais.
+            </p>
+
+            <p>
+              Começamos nossa análise plotando os dados de chuva acumulada e chamados ao 1746:
+            </p>
 
             <img src="figs/line1.png" class="center"></img>
 
-            <p>Etiam laoreet mi non ligula dignissim, ut tempor lectus sagittis. Fusce dictum, est eget tincidunt sollicitudin, nulla metus venenatis turpis, in cursus nisi lacus vitae neque. Phasellus lacus arcu, euismod a tortor eget, condimentum pulvinar nunc. Curabitur ultrices tortor at mattis consequat. Etiam faucibus pulvinar purus, in pulvinar sem luctus elementum. Maecenas massa eros, egestas ac urna eget, varius lobortis libero. Fusce rutrum nulla eu odio euismod, at aliquam ipsum ultricies. Aliquam ultricies quam ut nisi facilisis tristique. Donec in elit accumsan, tincidunt ipsum sed, viverra mi. Nam venenatis consectetur fermentum.</p>
+            <p>
+              Em primeiro lugar, notamos a periodicidade dos chamados vinculada ao cíclo diurno. Isso já nos informa que qualquer
+              correlação existente possuirá um atraso temporal.
+            </p>
+
+            <p>
+              A seguir, provemos um corte da imagem acima, mostrando um intervalo temporal menor:
+            </p>
 
             <img src="figs/line2.png" class="center"></img>
 
-            <p>Nulla scelerisque lacus ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc dapibus quam eu purus aliquet hendrerit. Maecenas eget efficitur ex, a faucibus metus. Morbi euismod odio justo, at scelerisque mauris gravida non. Curabitur bibendum rhoncus tortor ac mattis. Morbi a pulvinar metus. Phasellus pellentesque ante eu magna porta tempus. Integer finibus facilisis rhoncus. Praesent hendrerit facilisis ligula, vitae vestibulum tellus dictum et. Pellentesque eleifend justo at mi posuere luctus. Sed hendrerit odio sit amet ante tempus, id lobortis neque lacinia. Ut bibendum eros in dolor pulvinar tincidunt. Ut in enim eu lectus congue tincidunt ut eget neque.</p>
+            <p>
+              A partir disso, nota-se também uma disparidade entre os acumulados de chuva em intervalos diferentes. Dado que os
+              valores acumulados de 4 horas são a soma de vários acumulados de 15 minutos anteriores, espera-se que os picos
+              de valores acumulados em 4 horas fossem antecedidos por vários valores não nulos dos acumulados de 15 minutos.
+            </p>
+
+            <p>
+              Vemos isso mais claramente na seguinte imagem, a qual ignora os chamados e demonstra que os acumulados de 15 minutos ocorrem
+              apenas durante eventos chuvosos mais potentes. Uma possível hipótese é que os pluviometros possuem um limite mínimo para detecção.
+            </p>
 
             <img src="figs/line3.png" class="center"></img>
 
-            <p>Mauris tristique non magna nec aliquam. Curabitur et odio ac urna pretium ultrices. Nullam orci turpis, auctor volutpat lectus non, pellentesque laoreet augue. Aliquam auctor massa vel finibus luctus. Aenean vitae metus vel nunc varius placerat. Aliquam pretium et velit at mollis. Duis sagittis sagittis tortor, quis lobortis dui semper et. Mauris auctor ac neque eget auctor. Donec egestas lobortis odio eu fringilla. Duis id risus et est finibus faucibus non ut quam. Morbi suscipit felis a nisi dictum, quis faucibus orci venenatis. Suspendisse porta purus sapien, at bibendum leo vulputate ut.</p>
+            <p>
+              Em seguida, começamos a plotar a contagem móvel de chamados contra os valores acumulados de chuva. A seguir, temos uma plotagem
+              com uma janela de 6 horas para as chamadas:
+            </p>
 
             <img src="figs/regplot1.png" class="center"></img>
 
-            <p>Maecenas convallis eleifend massa, a ultricies quam aliquam eget. Duis vestibulum semper neque. Etiam pretium elit nunc, ac molestie tortor laoreet non. Morbi vel metus vitae tortor lacinia mollis. Praesent nec eros justo. Cras sit amet ex placerat, suscipit mi eget, commodo nulla. Maecenas cursus volutpat dui, vitae maximus enim efficitur nec. Quisque vitae est vitae diam mollis lacinia. Phasellus sodales lorem id feugiat ultricies. Suspendisse sit amet lacus libero. Ut viverra quis purus a pretium. Vivamus imperdiet rutrum sapien, sit amet porta turpis tincidunt vel. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <p>
+              A reta ajustada demonstra que, caso haja uma correlação, ela é quase irrelevante. Contudo, como discutido antes, há a possibilidade
+              de que a correlação possua um grande atraso temporal e, portanto, será mais aparente para janelas maiores de chamados.
+            </p>
+
+            <p>
+              Seguimos essa ideia aumentando a janela móvel de chamados para 24 horas na seguinte imagem:
+            </p>
 
             <img src="figs/regplot2.png" class="center"></img>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec auctor risus, vel egestas nisl. Praesent at auctor nulla, auctor sollicitudin erat. Fusce mi nisi, placerat et orci ac, posuere efficitur turpis. Nulla eu euismod nisi. Etiam in aliquet est. Nunc egestas velit sed semper finibus. Phasellus volutpat tincidunt dui id malesuada. Pellentesque lobortis metus non elementum aliquam. Mauris vehicula eros eget est porttitor, non malesuada lorem malesuada. Nullam ut efficitur justo, vitae dignissim nisl. Aenean dui nunc, interdum a bibendum sed, maximus vitae nulla. Praesent aliquet sodales elit nec aliquet. Donec bibendum condimentum libero, id ultrices tortor tempor id.</p>
+            <p>
+              Vemos um consideravel aumento no ângulo da reta, fortificando a teoria de que a correlação existe sobre um atraso temporal.
+            </p>
 
         </div>
 
@@ -54,7 +90,7 @@
             </div>
 
             <div class="footer">
-                <a href="https://github.com/Gab-Mel/Bubble-Storm/" target="_blank">GitHub</a>  |  
+                <a href="https://github.com/Gab-Mel/Bubble-Storm/" target="_blank">GitHub</a>  |
                 <a href="mailto:bubble.storm.hydro.data@gmail.com" target="_blank">E-mail</a>
             </div>
         </footer>
