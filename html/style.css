@@ -1,6 +1,8 @@
 body {
     margin: 0; 
     padding: 0;
+    background-color: #111111;
+    color: rgb(216, 218, 243); /*black;*/
 }
 
 li {
@@ -31,7 +33,7 @@ footer a {
   float: justify;
   padding: 20px;
   height: 100%;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   padding-bottom: 2em;
   padding-left: 5em;
   padding-right: 5em;
@@ -44,51 +46,59 @@ footer a {
 }
 
 .header {
-    overflow: hidden;
-    background-color: #02021b; /*#0e0920;*/
-    padding: 20px 10px;
-  }
+  overflow: hidden;
+  background-color: #02021b; /*#0e0920;*/
+  padding: 20px 10px;
+}
   
+.header a {
+  float: left;
+  color: rgb(216, 218, 243);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+  
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+  
+.header a:hover {
+  background-color: #212152;/*#ddd; */
+  color: rgb(216, 218, 243); /*black;*/
+}
+  
+.header a.active {
+  background-color: #7f7fe0;/*rgb(109, 112, 116);*/
+  color: black;/*white;*/
+}
+  
+.header-right {
+  float: right;
+}
+  
+@media screen and (max-width: 500px) {
   .header a {
-    float: left;
-    color: rgb(216, 218, 243);
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
+    float: none;
+    display: block;
+    text-align: left;
   }
-  
-  .header a.logo {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-  .header a:hover {
-    background-color: #212152;/*#ddd; */
-    color: rgb(216, 218, 243); /*black;*/
-  }
-  
-  .header a.active {
-    background-color: #7f7fe0;/*rgb(109, 112, 116);*/
-    color: black;/*white;*/
-  }
-  
   .header-right {
-    float: right;
+    float: none;
   }
-  
-  @media screen and (max-width: 500px) {
-    .header a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .header-right {
-      float: none;
-    }
   
   }
   
+#bodymap {
+  background-color: #111111;
+  color: rgb(216, 218, 243); /*black;*/
+}
+
+#map {
+  float: justify;
+}
 
