@@ -35,8 +35,9 @@ pluvData.sort_index(ascending=False, inplace=True)
 
 # Calculate the rolling count of calls
 #callData = callData.loc[callData["id_tipo"] == 9]
-callData = callData.rolling('1H').count()
+callData = callData.rolling('24H').count()
 callData.columns = ["contagem_chamadas"]
+callData -= 1
 
 mindate = np.datetime64("2023-02-01")
 maxdate = np.datetime64("2024-02-29")
