@@ -67,4 +67,5 @@ pluvData.sort_index(ascending=False, inplace=True)
 #plt.show()
 
 sns.regplot(matchedData, x="acumulado_chuva_24_h", y="contagem_chamadas")
+plt.savefig('../html/figs/regplot2.png')
 plt.show()

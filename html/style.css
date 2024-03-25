@@ -90,8 +90,7 @@ footer a {
   .header-right {
     float: none;
   }
-  
-  }
+}
   
 #bodymap {
   background-color: #111111;
@@ -102,3 +101,9 @@ footer a {
   float: justify;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
