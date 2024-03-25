@@ -66,13 +66,13 @@ footer a {
   }
   
   .header a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #212152;/*#ddd; */
+    color: rgb(216, 218, 243); /*black;*/
   }
   
   .header a.active {
-    background-color: rgb(109, 112, 116);
-    color: white;
+    background-color: #7f7fe0;/*rgb(109, 112, 116);*/
+    color: black;/*white;*/
   }
   
   .header-right {
